@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#FFFFFF;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    background-image:url("llevar-neumaticos-de-invierno-en-verano.jpg");
+}
+
+.falling-element {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    
+    background-image:url("Copo_de_nieve.png");
+    animation-name: fall;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(calc(100vh - 50px));
+    }
+}
